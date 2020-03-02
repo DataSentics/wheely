@@ -17,10 +17,12 @@ Pass your `requirements.txt` file to the following command to have your `all.whe
 $ cat /path/to/requirements.txt | docker run -i --rm -v /path/to/output-directory:/output datasentics/wheely
 ```
 
-## 3. Using the wheelhouse on the Databricks cluster
+## 3. Upload the wheelhouse to the DBFS
 
-Upload wheelhouse to DBFS via *DBFS -> Python Whl*
+Upload the wheelhouse to some (sub)folder in `dbfs:/mnt` using Databricks CLI or Azure Blob Storage/AWS S3 GUI. 
+
+## 4. Install the wheelhouse Databricks cluster
 
 ![Image of Yaktocat](docs/wheelhouse_upload.png)
 
-Then either **install the library manually on your cluster** (*Libraries* section) or use `dbutils.library.install()` in your notebook.
+Either **install the library manually on your cluster** (*Libraries -> Install Library -> DBFS -> Python Whl*) or use `dbutils.library.install()` in your notebook.
