@@ -11,6 +11,8 @@ $ docker build -t datasentics/wheely .
 
 ## 2. Build the wheelhouse .zip package
 
+Pass your `requirements.txt` file to the following command to have your `all.wheehouse.zip` file generated into given `/path/to/output-directory` dir on your computer.
+
 ```bash
 $ cat /path/to/requirements.txt | docker run -i --rm -v /path/to/output-directory:/output datasentics/wheely
 ```
