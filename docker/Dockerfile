@@ -6,4 +6,4 @@ WORKDIR /output
 
 RUN apt-get update && apt-get install -y zip gcc
 
-CMD ["/opt/build_wheelhouse.sh"]
+CMD ["bash", "/opt/build_wheelhouse.sh"]
